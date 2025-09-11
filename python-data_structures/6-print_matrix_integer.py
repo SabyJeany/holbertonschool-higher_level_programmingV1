@@ -7,4 +7,3 @@ def print_matrix_integer(matrix=[[i]]):
             else:
                 print("{:d}".format(matrix[i][j]), end="")
         print("")
-    
