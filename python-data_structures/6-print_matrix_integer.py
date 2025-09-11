@@ -4,3 +4,4 @@ def print_matrix_integer(matrix=[[]]):
         return
     for row in matrix:
         print(" ".join(str(x) for x in row))
+        
