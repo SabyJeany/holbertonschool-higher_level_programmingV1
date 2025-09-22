@@ -2,13 +2,14 @@
 
 """ class Square """
 
+
 class Square:
     """Représente un carré.
 
     Attributes:
         size (int): La taille du carré.
-    """
-    
+"""
+
     def __init__(self, size=0):
         """Initialise un carré avec une taille donnée.
 
