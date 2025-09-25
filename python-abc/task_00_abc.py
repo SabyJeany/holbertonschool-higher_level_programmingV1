@@ -24,4 +24,4 @@ class Cat(Animal):
     """Cat class, implements sound()."""
     def sound(self):
         """Returns cat sound."""
-        return ("Miouw")
+        return ("Meow")
