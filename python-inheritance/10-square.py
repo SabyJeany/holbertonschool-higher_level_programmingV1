@@ -34,6 +34,7 @@ class Rectangle(BaseGeometry):
         """Returns rectangle description."""
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
 
+
 class Square(Rectangle):
     """Square class inheriting from Rectangle."""
 
