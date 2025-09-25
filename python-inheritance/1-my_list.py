@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Task 1 : My List """
+"""Module that defines MyList class."""
 
 
 class MyList(list):
-    """Create the class"""
+    """A subclass of list with a method to print a sorted list."""
     def print_sorted(self):
-        """ Function that print a list of the instances of a given class """
+        """Prints the list, but sorted in ascending order. """
         sort_list = sorted(self)
         print(sort_list)
