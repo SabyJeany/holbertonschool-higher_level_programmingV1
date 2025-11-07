@@ -1,27 +1,19 @@
 #!/usr/bin/python3
-"""
-Lists all states from the database hbtn_0e_0_usa
-"""
+"""Lists all states from the database hbtn_0e_0_usa"""
 import MySQLdb
 import sys
 
-
 if __name__ == "__main__":
-    """
-    Main function:
-    that executes the database
-    connection and retrieval of states.
-    """
-
+    """Connect to the MySQL server  and prints all states ordered by id."""
     username = sys.argv[1]
     password = sys.argv[2]
-    database = sys.argv[3]
+    db_name = sys.argv[3]
 
     db = MySQLdb.connect(
         host="localhost",
         user=username,
         passwd=password,
-        db=database,
+        db=db_name,
         port=3306
     )
     cursor = db.cursor()
