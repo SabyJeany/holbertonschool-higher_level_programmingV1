@@ -1,27 +1,25 @@
 #!/usr/bin/python3
-"""Lists all states from the database hbtn_0e_0_usa"""
+"""Lists all states from the database hbtn_0e_0_usa."""
 import MySQLdb
-import sys
+from sys import argv
+
 
 if __name__ == "__main__":
-    """Connect to the MySQL server  and prints all states ordered by id."""
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-
     db = MySQLdb.connect(
         host="localhost",
-        user=username,
-        passwd=password,
-        db=db_name,
-        port=3306
+        port=3306,
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3],
+        charset="utf8"
     )
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    states = cursor.fetchall()
 
-    for state in states:
-        print(state)
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
 
-    cursor.close()
+    for row in rows:
+        print(row)
+
+    cur.close()
     db.close()
